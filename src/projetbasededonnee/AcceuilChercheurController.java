@@ -107,7 +107,7 @@ public class AcceuilChercheurController implements Initializable {
         
         Scene ajoutSceneConn = new Scene(ajoutParent);
         
-       CCO.setConnexion(connex);
+        CCO.setConnexion(connex);
 
         //This line gets the Stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -126,7 +126,7 @@ public class AcceuilChercheurController implements Initializable {
         AddUpletPage.setVisible(false);
     } 
 
-    /**
+    /**ludi
      * Affichage du panel AddUpletPage, la page permettant d'ajouter des 
      * réplicats (uplet) à une expérience
      * @param event
@@ -136,6 +136,12 @@ public class AcceuilChercheurController implements Initializable {
         homePageChercheur.setVisible(false);
         ajoutExpPage.setVisible(true); 
         AddUpletPage.setVisible(false);
+    }
+    
+    public void AddUpletEvent(MouseEvent event) throws IOException {
+        homePageChercheur.setVisible(false);
+        ajoutExpPage.setVisible(false); 
+        AddUpletPage.setVisible(true);
     }
     
     public void setConnection(Connexion cone)
